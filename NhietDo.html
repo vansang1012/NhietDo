@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhiệt Độ</title>
+</head>
+<body>
+<script>
+    function NhietDo(t) {
+        this.t=t;
+        this.setDoF=function () {
+            return 9/5 * this.t + 32;
+        }
+        this.setDoK=function () {
+            return 273 + this.t;
+        }
+    }
+    let temp=new NhietDo(25);
+    document.write("Độ K là: "+ temp.setDoK()+ "<br> Độ F là: " + temp.setDoF());
+
+</script>
+</body>
+</html>
